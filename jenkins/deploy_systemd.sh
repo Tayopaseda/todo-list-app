@@ -13,13 +13,14 @@ Description=Todo List
 [Service]
 # Systemd service configuration here
 # You'll need to set these environment variables:
-#     DATABASE_URI
-#     SECRET_KEY
+export  DATABASE_URI=sqlite:///data.db
+export  SECRET_KEY=hbjhbsjbwjbwjhbejbejhwbdjbjcb jbcjkbjkbcwewejhkb
 # 
 # Use the jenkins/setup.sh script to start the app
-# 
+sudo ./setup.sh
 # Attach the user either to jenkins or (preferably) 
 # dedicated service user, e.g. pythonadm
+sudo chown -R pythonadm:pythonadm /opt/todo-list
 # ----------------------------------
 # Configuration here!
 # ----------------------------------
