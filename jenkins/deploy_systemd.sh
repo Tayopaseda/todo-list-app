@@ -8,7 +8,7 @@ sudo cp -r . /opt/todo-list
 # Generate service file
 cat << EOF > todo-list.service
 [Unit]
-Description=Todo List
+Description="Todo List"
 
 [Service]
 # Systemd service configuration here
