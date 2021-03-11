@@ -22,8 +22,8 @@ Description=Todo List
 # ----------------------------------
 # Configuration here!
 # ----------------------------------
-export  DATABASE_URI=sqlite:///data.db
-export  SECRET_KEY=hbjhbsjbwjbwjhbejbejhwbdjbjcb jbcjkbjkbcwewejhkb
+export  DATABASE_URI
+export  SECRET_KEY
 sudo ./setup.sh
 sudo chown -R pythonadm:pythonadm /opt/todo-list
 
