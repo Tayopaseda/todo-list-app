@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Install application to /opt/
-rm -r /opt/todo-list
-mkdir /opt/todo-list
-cp -r . /opt/todo-list
+sudo rm -r /opt/todo-list
+sudo mkdir /opt/todo-list
+sudo cp -r . /opt/todo-list
 
 # Generate service file
 cat << EOF > todo-list.service
