@@ -8,7 +8,7 @@ sudo cp -r . /opt/todo-list
 # Generate service file
 cat << EOF > todo-list.service
 [Unit]
-Description=Todo_List
+Description=Todo List
 
 [Service]
 # Systemd service configuration here
@@ -21,17 +21,18 @@ Description=Todo_List
 
 # ----------------------------------
 # Configuration here!
-# ----------------------------------
-export  DATABASE_URI
-export  SECRET_KEY
-sudo ./setup.sh
-sudo chown -R pythonadm:pythonadm /opt/todo-list
+# ---------------------------------- 
+User=service-user
+Environment=SECRET_KEY
+Environment=DATABASE_URI
+ExecStart=./setup.sh
 
 [Install]
 WantedBy=multi-user.target
 EOF
 
 # Move service file to systemd
+sudo chown -R pythonadm:pythonadm /opt/todo-list
 sudo cp todo-list.service /etc/systemd/system/todo-list.service
 
 # systemd reload/start/stop
