@@ -11,7 +11,7 @@ cat > todo-list.service << EOF
 Description=Todo List
 
 [Service]
-User=pythonadm
+User=jenkins
 Environment=SECRET_KEY
 Environment=DATABASE_URI
 ExecStart=/home/jenkins/todo-list-app/startup.sh
@@ -21,7 +21,7 @@ WantedBy=multi-user.target
 EOF
 
 # Move service file to 
-sudo chown -R pythonadm:pythonadm /opt/todo-list
+#sudo chown -R pythonadm:pythonadm /opt/todo-list
 sudo cp todo-list.service /etc/systemd/system/todo-list.service
 
 # systemd reload/start/stop
