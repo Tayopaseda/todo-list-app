@@ -6,7 +6,7 @@ sudo mkdir /opt/todo-list
 sudo cp -r . /opt/todo-list
 
 # Generate service file
-cat << EOF > todo-list.service
+cat > todo-list.service << EOF 
 [Unit]
 Description=Todo List
 
