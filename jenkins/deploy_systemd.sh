@@ -22,16 +22,17 @@ Description=Todo List
 # ----------------------------------
 # Configuration here!
 # ---------------------------------- 
-User=service-user
+User=pythonadm
 Environment=SECRET_KEY
 Environment=DATABASE_URI
-ExecStart=./setup.sh
+ExecStart=~/jenkins/setup.sh
 
 [Install]
 WantedBy=multi-user.target
 EOF
 
-# Move service file to systemd
+# Move service file to 
+sudo useradd --system pythonadm
 sudo chown -R pythonadm:pythonadm /opt/todo-list
 sudo cp todo-list.service /etc/systemd/system/todo-list.service
 
