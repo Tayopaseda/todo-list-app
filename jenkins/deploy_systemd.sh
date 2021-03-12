@@ -11,17 +11,6 @@ cat << EOF > todo-list.service
 Description=Todo List
 
 [Service]
-# Systemd service configuration here
-# You'll need to set these environment variables:
-# 
-# Use the jenkins/setup.sh script to start the app
-
-# Attach the user either to jenkins or (preferably) 
-# dedicated service user, e.g. pythonadm
-
-# ----------------------------------
-# Configuration here!
-# ---------------------------------- 
 User=pythonadm
 Environment=SECRET_KEY
 Environment=DATABASE_URI
