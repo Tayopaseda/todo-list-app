@@ -14,7 +14,7 @@ Description=Todo List
 User=pythonadm
 Environment=SECRET_KEY
 Environment=DATABASE_URI
-ExecStart=~/jenkins/setup.sh
+ExecStart=/home/jenkins/setup.sh
 
 [Install]
 WantedBy=multi-user.target
