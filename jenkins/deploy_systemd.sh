@@ -32,7 +32,6 @@ WantedBy=multi-user.target
 EOF
 
 # Move service file to 
-sudo useradd --system pythonadm
 sudo chown -R pythonadm:pythonadm /opt/todo-list
 sudo cp todo-list.service /etc/systemd/system/todo-list.service
 
